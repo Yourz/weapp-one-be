@@ -1,0 +1,25 @@
+{
+  "name": "weapp-demo-be",
+  "version": "1.0.0",
+  "description": "request transmit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yourz/weapp-one-be.git"
+  },
+  "author": "Yourz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yourz/weapp-one-be/issues"
+  },
+  "homepage": "https://github.com/Yourz/weapp-one-be#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
