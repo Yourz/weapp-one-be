@@ -1,6 +1,14 @@
 var express = require('express');
 var app = express();
+var fs = require('fs');
+var https = require('https');
 var request = require('request');
+var privateKey  = fs.readFileSync('https/private.pem', 'utf8');
+var certificate = fs.readFileSync('https/file.crt', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+
+var httpsServer = https.createServer(credentials, app);
+var SSLPORT = 3000;
 // var bodyParser = require('body-parser');
 var apiAdress = 'http://v3.wufazhuce.com:8000/api/';
 
@@ -74,4 +82,4 @@ app.get('/', function (req, res) {
   });
 });
 
-var server = app.listen(3000);
+httpsServer.listen(SSLPORT);
